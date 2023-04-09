@@ -1,0 +1,11 @@
+.grand_parent{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+@media (max-width: 786px){
+    .grand_parent{height: auto;}
+}
