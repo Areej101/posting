@@ -212,7 +212,7 @@ const Schedule = () => {
     </div>
         </div>
         <div className="mt-[50px]">
-        <table className="]">
+        <table className="a">
         <thead>
           <tr className="bg-[#EFEFEF]">
             <th>Monday</th>

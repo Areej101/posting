@@ -1,15 +1,16 @@
-table {
+.a {
     width: 1300px;
     height: 400px;
     border-collapse: collapse;
+    margin-left: -20px;
   }
   
-  th {
+.a th {
     border-bottom: 1px solid black;
     border: 2px solid #EFEFEF;
   }
   
-  td {
+.a td {
     text-align: center;
     border: 1px solid #EFEFEF;
   }
