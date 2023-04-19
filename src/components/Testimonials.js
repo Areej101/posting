@@ -11,11 +11,11 @@ const Testimonials = () => {
     <div className='container mx-auto'>
      {/**title */}
      <button className='btn btn-[#7EB168] btn-outline bg-[#7EB168] text-white lg:flex w-[200px] h-[30px] rounded rounded-full -mt-12 text-sm mx-auto mb-2 '>{btnText3}</button>
-     <h2 className='title text-center max-w-[920px] mx-[30px] text-green-600'>{title}</h2>
-     <h2 className='title  -mt-[63px] text-center w-[1000px] mx-[130px] gap-[10px]'>{title3}</h2>
-     <h2 className='title  -mt-5 text-center max-w-[920px] mx-auto'>{title2}</h2>
+     <h1 class="text-3xl title-font text-gray-900 mb-12 text-center font-bold">Trusted by 100's</h1>
+     <h1 class="text-3xl  title-font text-gray-900 -mt-10 text-center font-bold">of users</h1>
+
      {/**slider */}
-     <div>
+     <div className='mt-10'>
       <ClientSlider clients={clients} />
      </div>
     </div>

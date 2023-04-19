@@ -6,17 +6,22 @@ import {HiMail} from 'react-icons/hi'
 const Feature1 = () => {
   const{feature1} = features;
   const {title,image, btnIcon, btntext5} = feature1;
-  return <section data-aos='fade-up' data-aos-delay='400'>
-    <div className='container bg-[#DFD7F9] mt-[95px] h-[245px] w-[600px] mx-[340px] rounded-tl-[90px] rounded-tr-[70px] rounded-br-[20px] rounded-bl-[20px]'>
-      <img src={image} className='h-[70px] mx-[510px]' alt='' />
-      <p className='text-center text-[25px]'>{title}</p>
-      <div className='flex gap-x-[6px] mt-[30px]'>
-        <input className='mx-[50px] shadow appearance-none border rounded w-[290px] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ' id="username" type="text" placeholder="Your email"></input>
-        <button className='btn btn-md md:btn-md bg-[#A57CE6] text-white'>{btntext5}</button>
-      </div>
+  return <section class="text-black body-font mt-8">
+  <div class="container px-5 py-24 mx-auto bg-[#DFD7F9] rounded rounded-tl-[150px] rounded-tr-[50px] rounded-br-[50px] rounded-bl-[50px]">
+    <div class="flex flex-col text-center w-full mb-12">
+      <h1 class="sm:text-3xl text-md font-medium title-font mb-4 text-gray-900 text-center"></h1>
+      <p class="lg:w-2/3 mx-auto leading-relaxed text-3x1 -mt-8">Subscribe to get information, latest news and other < br />interesting offers about Automatic Post</p>
     </div>
-
-  </section>
+    <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+     
+      <div class="relative flex-grow w-full ml-48">
+        <label for="email" class="leading-7 text-sm text-gray-600"></label>
+        <input type="email" id="email" name="email" class="w-[300px] bg-[#FFFFFF] rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+      </div>
+      <button class="text-white bg-[#A57CE6] border-0 py-2 px-8 mr-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Subscribe</button>
+    </div>
+  </div>
+</section>
 };
 
 export default Feature1;

@@ -1,3 +1,5 @@
+import {Link } from "react-router-dom";
+
 // import images
 import LogoImg from '../src/assests/img/header/logo.svg';
 import LogoImg5 from '../src/assests/img/signin/logo1.svg';
@@ -38,7 +40,7 @@ import on2 from '../src/assests/img/onboarding/content.png';
 import on3 from '../src/assests/img/onboarding/calendar.png';
 import bellicon from '../src/assests/img/schedule/bell.png';
 import usericon from '../src/assests/img/schedule/user.png';
-import Link from '../src/assests/img/schedule/link.png';
+import Link1 from '../src/assests/img/schedule/link.png';
 import Fileee from '../src/assests/img/schedule/file.png';
 import Edit from '../src/assests/img/schedule/edit.png';
 import Calendar from '../src/assests/img/schedule/calendarr.png';
@@ -65,7 +67,7 @@ export const header = {
 export const schedule = {
   bell:  bellicon,
   user: usericon,
-  link: Link,
+  link: Link1,
   file: Fileee,
   edit: Edit,
   calendar: Calendar,
@@ -135,13 +137,13 @@ export const signin = {
 };
 
 export const nav = [
-  { name: 'Home', href: '/' },
-  { name: 'Platform', href: '/' },
-  { name: 'Pricing', href: '' },
-  { name: 'Concierge Service', href: '/' },
-  { name: 'Resources', href: '/' },
-  { name: 'Book a Demo', href: '/' },
-  { name: 'Overview', href: '/' },
+  { name: 'Home', to: '/' },
+  { name: 'Platform', to: '/' },
+  { name: 'Pricing', to: '/plans' },
+  { name: 'Concierge Service', to: '/' },
+  { name: 'Resources', to: '/' },
+  { name: 'Book a Demo', to: '/' },
+  { name: 'Overview', to: '/' },
 ];
 
 export const hero = {

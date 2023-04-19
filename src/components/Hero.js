@@ -8,39 +8,25 @@ import {HiArrowPath} from 'react-icons/hi2'
 const Hero = () => {
     //destrucure hero data
     const {title, subtitle, btnText,btn2Text, compText,free, image} = hero;
-  return <section className='min-h-[900px] py-12'>
-    <div className='container mx-auto h-[900px flex justify-center items-center'>
-        <div className='flex flex-col md:gap-x-[30px] gap-y-16 lg:gap-y-0 
-        lg:flex-row items-center justify-center text-center lg:text-left'>
-            {/* text */}
-            <div className='flex-1'>
-                <h3 className='title mb-4 lg:mb-8 text-center text-[45px]' 
-                data-aos='fade-down'
-                data-aos-delay='500'>{title}</h3>
-                <p className='mb-5 lg:mb-10 mt-[-5px]'
-                data-aos='fade-down'
-                data-aos-delay='600'>{subtitle}</p>
-                {/*btn & cmp text*/}
-                <div className='flex flex-justify items-center max-w-sm
-                lg:max-w-full mx-auto lg:mx-0 gap-x-2 lg:gap-x-6'>
-                    <button className='btn btn-md md:btn-md bg-[#A57CE6]
-                    flex justify-center items-center lg:gap-x-4 text-white mt-[20px]'
-                    data-aos='fade-down' data-aos-delay='700'>{btnText}</button>
-                    <span className=' mt-[20px]' data-aos='fade-down' data-aos-delay='700'>{compText}</span>
-                    <button className='btn btn-md md:btn-md bg-[#A57CE6]
-                      lg:gap-x-4 text-white  mt-[20px]' data-aos='fade-down'
-                      data-aos-delay='500'>{btn2Text}</button>
-                    {/* write comp2Text here */}
-                </div>
-                <span className='flex flex-row mt-[10px] mr-[110px] font-bold justify-center items-center' data-aos='fade-down' data-aos-delay='800'>{free}</span>
-            </div>
-            {/* image */}
-            <div className='flex-1 mt-[-50px]'  data-aos='fade-down' data-aos-delay='300'>
-                <img src={image} className='h-[500px] mx-[100px]' alt='' />
-            </div>
-        </div>
+  return <section class="text-gray-600 body-font mx-auto -mt-24">
+  <div class="container min-w-full px-0 flex  py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center lg:ml-32">
+      <h1 class="title-font sm:text-4xl text-4xl mb-4 font-bold text-gray-900">More Leads, Less Effort
+        <br class="hidden lg:inline-block" />
+      </h1>
+      <p class="mb-8 leading-relaxed">Automatic Post helps you manage your social media accounts from one place—create, schedule, publish, and analyze. Save time and grow your profiles with an affordable tool.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-[#A57CE6] border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">{btnText}</button>
+        <button class="ml-4 inline-flex text-white bg-[#A57CE6] border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">{btn2Text}</button>
+      </div>
+      <p class="text-sm mt-2 text-black mb-8 w-full font-bold">14-Day Free Trial, No Credit Card Required</p>
+
     </div>
-  </section>;
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src={image} />
+    </div>
+  </div>
+</section>
 };
 
 export default Hero;

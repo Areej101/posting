@@ -9,81 +9,113 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Link, useNavigate } from 'react-router-dom';
 
+
 const Sign = () => {
-  const { logo5, text7, brands,slides,comment, position } = signin;
+  const { logo5, text7, brands, slides, image, comment, position } = signin;
   const [signIn] = React.useState(true);
-  return <section>
-    <div className=''>
-      {/* logo */}
-      <a href="# " className='flex sm:mb-3'>
-        <img src={logo5} className='mx-[100px] h-[25px] mt-[10px] bg-[#A57CE6]' alt="" />
-        <span className='font-bold text-[#A57CE6] mt-[10px] mx-[-80px]'>{text7}</span>
+  return <section class="text-gray-600 body-font">
+    <header>
+      <a href="#" class="ml-20 mt-4 flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+        <img src={logo5} className=" h-9 bg-[#AD7CE6]" alt="" />
+        <span class="ml-1 text-[#AD7CE6] text-xl">Automation Post</span>
       </a>
-    </div>
-    <div className=' curved bg-[#A57CE6] w-[500px] mx-[780px] h-[600px] mt-[-50px]'>
-      {/**slider */}
-      <Swiper
-        modules={[Navigation, Pagination, A11y]}
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-       // pagination={{ clickable: true }}
-        onSlideChange={() => console.log('slide change')}
-        onSwiper={(swiper) => console.log(swiper)}
-      >
-        {slides.map((slide) => (
-          <SwiperSlide key={slide.image} className=''>
-            <img className='h-[180px] mx-[150px] mt-[120px]' src={slide.image} alt={slide.comment} />
-            <div className='text-center font-normal text-[50px] text-white mt-[20px] mx-[40px] leading-[55px]'>{slide.comment}</div>
-            <div className='text-center font-normal text-[17px] text-[#F5DC4D] mt-[5px]'>{slide.position}</div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
-    <div class="w-[1100px]">
-      <form class="bg-white mt-[-500px] mx-[300px] w-[300px] mb-4">
-        <h1 className=' text-[30px] mt-[-100px] text-center font-bold'>Sign In Continue</h1>
-        <div class="mb-4 mt-[40px]">
-          <input class="bg-[#EFEFEF] rounded-[20px] h-[45px] text-sm w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Email Address" />
-        </div>
-        <div class="mb-6">
-          <input class="bg-[#EFEFEF] rounded-[20px]  h-[45px] text-sm w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" />
-          <p class="text-red-500 text-xs italic"></p>
-        </div>
-        <div className='mt-[-40px] mx-[180px] w-[300px]'>
-          <Link class=" text-sm text-[#A57CE6]   hover:text-blue-800" to="/forget">
-            Forgot Password?
-          </Link>
-        </div>
-        <div class="flex flex-row items-center justify-between mt-[35px]">
-          <Link class="bg-[#A57CE6] w-[300px] hover:bg-blue-700 text-white font-bold py-2 px-4 btn btn-md md:btn-md rounded-[30px] focus:outline-none focus:shadow-outline" type="button" to="/onboarding">
-            Sign In
-          </Link>
-        </div>
-        <div className='mt-[5px] mx-[98px] w-[300px]'>
-          <a class=" text-sm text-[black]   hover:text-blue-800" href="#">
-            Or continue with
-          </a>
-        </div>
-        <div className='flex gap-[20px] justify-center items-center mt-[20px]'>
-          {/**brands */}
-          {brands.map((item, index) => {
-            //destructure item
-            const { image, delay } = item;
-            return <div key={index} className=''>
-              {/** brand img */}
-              <img className=' h-[40px]' src={image} alt='' />
+    </header>
+    <div class="container px-5 py-24 mx-auto flex flex-wrap">
+      <div class="flex flex-wrap -m-4">
+
+        <div class="p-4 lg:w-1/2 md:w-full -mt-10">
+          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+            <div class="flex-grow">
+              <h2 class="text-gray-900 text-4xl title-font text-center font-medium mb-3">Sign in Continue</h2>
+              <div class="relative flex-grow w-full flex justify-center">
+                <input type="email" placeholder="Email Address" id="email" name="email" class=" w-72 bg-[#EFEFEF] rounded rounded-full  focus:border-purple-500 focus:bg-transparent focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+              </div>
+              <div class="relative flex-grow w-full flex justify-center">
+                <input type="email" placeholder="Password" id="email" name="email" class=" mt-3 w-72 bg-[#EFEFEF] rounded rounded-full focus:border-purple-500 focus:bg-transparent focus:ring-2 focus:ring-purple-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+              </div>
+              <div className='flex items-center justify-evenly'>
+                <p class="leading-relaxed text-base text-white">Forget Password?</p>
+                <Link class=" text-sm text-[#A57CE6]   hover:text-blue-800" to="/forget">
+                  <p class="leading-relaxed text-base">Forget Password?</p>
+                </Link>
+              </div>
+              <div className='flex justify-center'>
+                <Link to="/onboarding">
+                  <button class=" mt-3 w-72 text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none rounded rounded-full hover:bg-purple-600 text-lg">Sign in</button>
+                </Link>
+              </div>
+              <p class="leading-relaxed text-base text-center mt-3">or continue with</p>
+
+              <div className='flex justify-center gap-10 mt-6'>
+                {/**brands */}
+                {brands.map((item, index) => {
+                  //destructure item
+                  const { image, delay } = item;
+                  return <div key={index} className=''>
+                    {/** brand img */}
+                    <img className=' h-[40px]' src={image} alt='' />
+                  </div>
+                })}
+
+              </div>
+              <div className='flex justify-center'>
+                <p class="leading-relaxed text-base font-bold mt-3">New to AutomaticPost? <Link className='text-[#A57CE6]' to='/signup'>Sign up</Link></p>
+              </div>
+
+
             </div>
-          })}
+          </div>
         </div>
-        <div className='mt-[30px]'>
-          <h2 className='font-bold'>New to AutomaticPost? <Link className='text-[#A57CE6]' to='/signup'>Sign up</Link></h2>
+
+
+        <div class="p-4 lg:w-1/2 lg:h-screen lg:-mt-36 md:w-full bg-[#AD7CE6]">
+          <div class="flex border-2 rounded-lg border-gray-200 border-opacity-50 p-8 sm:flex-row flex-col">
+            <div className='flex-grow h-62 w-36 flex justify-items-center lg:'>
+                {/**slider */}
+                <Swiper
+                  modules={[Navigation, Pagination, A11y]}
+                  spaceBetween={50}
+                  slidesPerView={1}
+                  navigation
+                  // pagination={{ clickable: true }}
+                  onSlideChange={() => console.log('slide change')}
+                  onSwiper={(swiper) => console.log(swiper)}
+                  className=''
+                >
+                  {slides.map((slide) => (
+                    <SwiperSlide key={slide.image} className=''>
+                      <img className='' src={slide.image} alt={slide.comment} />
+                      <div className='text-center font-normal text-lg text-white'>{slide.comment}</div>
+                      <div className='text-center font-normal text-[#F5DC4D]'>{slide.position}</div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+            </div>
+            
+            <div class="flex-grow mt-40">
+              <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+              <a class="mt-3 text-purple-500 inline-flex items-center">Learn More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+
+
+
+
+
+
+          </div>
         </div>
-      </form>
+
+
+
+      </div>
     </div>
   </section>
-
 
 };
 
 export default Sign;
+

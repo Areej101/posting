@@ -14,23 +14,22 @@ const ProfileSetting = ({ ison, handleToggle }) => {
     const Menus = ["User Management"];
     const Menus2 = ["Profile Settings"];
     return <section>
-        <header className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#A57CE6]'>
-            {/* logo */}
-            <a href="# " className='flex sm:mb-3'>
-                <img src={logo} className='mx-[70px] h-[25px] mt-[-5px]' alt="" />
-                <span className='font-bold text-white mt-[-5px] mx-[-60px]'>{text}</span>
-            </a>
-            <div className='flex justify-center mt-[-40px] text-white w-full'>
-                <span className='font-bold text-[30px] mx-[400px]'>Profile Setting</span>
-                {/* <button className="mx-[-420px] btn btn-md md:btn-md btn-[#A57CE6] bg-[#A57CE6]"><span className=''></span></button> */}
-                <div className="flex gap-[10px] mx-[20px]">
-                    <img className="h-[30px]" src={bell} alt="" />
-                    <div className="relaive">
-                        <img onClick={() => setOpen(!open)} className="h-[30px]" src={user} alt="" />
-                    </div>
+         <header class="text-gray-600 body-font bg-[#A57CE6]">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    <img src={logo} className=" h-9" alt="" />
+                    <span class="ml-1 text-white text-xl">Automation Post</span>
+                </a>
+                <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                    <a class="mr-5 text-white text-3xl font-bold">Profile Setting</a>
+
+                </nav>
+                <button class="inline-flex items-center gap-1 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
+                    <img src={bell} alt="" />
+                    <img onClick={() => setOpen(!open)} src={user} alt="" />
                     {
                         open &&
-                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5">
+                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5 md:mt-0">
                             <ul className="text-black">
                                 {Menus.map((menu) => (
                                     <Link to='/userManagement'>
@@ -47,249 +46,90 @@ const ProfileSetting = ({ ison, handleToggle }) => {
                             </ul>
                         </div>
                     }
-                </div>
+                </button>
             </div>
         </header>
 
-        <div className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#EFEFEF] flex justify-center gap-[60px]'>
-            <p className="font-bold text-[22px] mr-[990px]">Action</p>
-            <p className="font-bold text-[22px]">Status</p>
+
+        <div class="container px-14 min-w-full p-5 flex-col md:flex-row bg-[#EFEFEF]">
+                <a class="text-black text-3xl font-bold">
+                    <p>Action</p>
+                </a>
+
+                <a class="text-black text-3xl font-bold">
+                    <p className="text-right -mt-8">Status</p>
+                </a>
+        </div>
+
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-7">I want the time to be formatted in an AM/PM format instead of 24-Hour Format</h1>
+        </div>
+
+        <div class="container px-12 min-w-full p-5 flex-col md:flex-row bg-[#EFEFEF]">
+                <a class="text-black text-3xl font-bold">
+                    <p>Notification Setting</p>
+                </a>
+        </div>
+
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when an item fails to post.</h1>
         </div>
         <hr />
-        <div className="mt-[-5px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">I want the time to be formatted in an AM/PM format instead of 24-Hour Format</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when the import is complete</h1>
         </div>
-        <hr className="mt-[-5px]" />
-        <div className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#EFEFEF] flex justify-center gap-[60px]'>
-            <p className="font-bold text-[22px] mr-[990px]">Notificaion Setting</p>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when the bulk edit is complete</h1>
         </div>
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when an item fails to post</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '930px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when a content category becomes empty</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when the import is complete</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '915px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when a content category is getting close to reaching the maximum number of items</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when the bulk edit is complete</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '905px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when an RSS feed fails to be retrieved (and paused)</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when a content category becomes empty</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '840px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me weekly with an analytics report</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when a content category is getting close to reaching the maximum number of items</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '580px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me about comments on posts I follow or when I’m mentioned</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when an RSS feed fails to be retrieved (and paused)</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '770px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">Email me when an item is marked as pending and needs to be published via reminders</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me weekly with an analytics report</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '910px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
-        </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me about comments on posts I follow or when I’m mentioned</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '750px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
-        </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">Email me when an item is marked as pending and needs to be published via reminders</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '630px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
-        </div>
-        <hr className="mt-[-15px]" />
 
-        <div className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#EFEFEF] flex justify-center gap-[60px]'>
-            <p className="font-bold text-[22px] mr-[990px]">Consents</p>
+
+        <div class="container px-12 min-w-full p-5 flex-col md:flex-row bg-[#EFEFEF]">
+                <a class="text-black text-3xl font-bold">
+                    <p>Consents</p>
+                </a>
         </div>
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">App Cookie Consent. Learn More</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '950px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">App Cookie Consent. Learn More</h1>
         </div>
-        <hr className="mt-[-15px]" />
-        <div className="mt-[-10px] py-6 lg:py-4 w-full h-[60px] transition-all z-10 flex">
-            <p className=" text-sm ml-[10px]">I consent to receive information about services and special offers by email</p>
-            <input
-                checked={ison}
-                onChange={handleToggle}
-                className="react-switch-checkbox"
-                style={{marginLeft: '700px'}}
-                id={`react-switch-new`}
-                type="checkbox"
-            />
-            <label
-                style={{ background: ison && '#06D6A0' }}
-                className="react-switch-label"
-                htmlFor={`react-switch-new`}
-            >
-                <span className={`react-switch-button`} />
-            </label>
+        <hr />
+        <div className="px-10">
+        <h1 class="title-font sm:text-sm text-sm mb-4 font-medium text-gray-900 mt-3">I consent to receive information about services and special offers by email</h1>
         </div>
-        <hr className="mt-[-15px]" />
+
+
+
+
+
+
+
+
+
 
     </section>
 }

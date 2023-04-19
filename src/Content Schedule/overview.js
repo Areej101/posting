@@ -12,228 +12,221 @@ const Overview = () => {
     const Menus = ["User Management"];
     const Menus2 = ["Profile Settings"];
     return <section>
-        <header className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#A57CE6]'>
-            {/* logo */}
-            <a href="# " className='flex sm:mb-3'>
-                <img src={logo} className='mx-[70px] h-[25px] mt-[-5px]' alt="" />
-                <span className='font-bold text-white mt-[-5px] mx-[-60px]'>{text}</span>
-            </a>
-            <div className='flex justify-center mt-[-40px] text-white w-full'>
-                <span className='font-bold text-[30px] mx-[400px]'>Overview</span>
-                {/* <button className="mx-[-420px] btn btn-md md:btn-md btn-[#A57CE6] bg-[#A57CE6]"><span className=''></span></button> */}
-                <div className="flex gap-[10px] mx-[20px]">
-                    <img className="h-[30px]" src={bell} alt="" />
-                    <div className="relaive">
-                        <img onClick={()=> setOpen(!open)} className="h-[30px]" src={user} alt="" />
-                    </div>
+        <header class="text-gray-600 body-font bg-[#A57CE6]">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                    <img src={logo} className=" h-9" alt="" />
+                    <span class="ml-1 text-white text-xl">Automation Post</span>
+                </a>
+                <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+                    <a class="mr-5 text-white text-3xl font-bold">Overview</a>
+
+                </nav>
+                <button class="inline-flex items-center gap-1 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
+                    <img src={bell} alt="" />
+                    <img onClick={() => setOpen(!open)} src={user} alt="" />
                     {
                         open &&
-                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5">
+                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5 md:mt-0">
                             <ul className="text-black">
                                 {Menus.map((menu) => (
                                     <Link to='/userManagement'>
-                                    <li onClick={()=> setOpen(false)} className="p-2 text-sm cursor-pointer rounded hover:bg-[#A57CE6]" key={menu}>{menu}</li>
+                                        <li onClick={() => setOpen(false)} className="p-2 text-sm cursor-pointer rounded hover:bg-[#A57CE6]" key={menu}>{menu}</li>
                                     </Link>
                                 ))}
                                 {Menus2.map((menu) => (
-                                    <Link to='/profileSetting'> 
-                                     <li onClick={()=> setOpen(false)} className="p-2 text-sm cursor-pointer rounded hover:bg-[#A57CE6]" key={menu}>{menu}</li>
-                                     </Link>
+                                    <Link to='/profileSetting'>
+                                        <li onClick={() => setOpen(false)} className="p-2 text-sm cursor-pointer rounded hover:bg-[#A57CE6]" key={menu}>{menu}</li>
+                                    </Link>
                                 ))
                                 }
 
                             </ul>
                         </div>
                     }
-                </div>
+                </button>
             </div>
         </header>
-        <div className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#EFEFEF] flex justify-center  gap-[60px]'>
-            <div>
-                <Link to='/importlink'><img className="" src={link} alt="" /></Link>
-            </div>
 
-            <div>
-                <Link to='/importcsv'><img className="" src={file} alt="" /></Link>
-            </div>
+        <div class="container  px-0 min-w-full flex flex-wrap p-5 flex-col md:flex-row items-center justify-normal bg-[#EFEFEF]">
+            <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center bg-[#EFEFEF]">
+                <a class="mr-5 text-white text-3xl font-bold">
+                    <Link to='/importlink'>
+                        <img src={link} />
+                    </Link>
+                </a>
 
-            <div>
-                <Link to='/overview'><img className="" src={edit} alt="" /></Link>
-            </div>
+                <a class="mr-5 text-white text-3xl font-bold">
+                    <Link to='/importcsv'>
+                        <img src={file} />
+                    </Link>
+                </a>
 
-            <div>
-                <Link to='/analytics'><img className="" src={calendar} alt="" /></Link>
-            </div>
+                <a class="mr-5 text-white text-3xl font-bold">
+                    <Link to='/overview'>
+                        <img src={edit} />
+                    </Link>
+                </a>
 
-            <div>
-                <Link to='/media'><img className="" src={graph} alt="" /></Link>
-            </div>
+                <a class="mr-5 text-white text-3xl font-bold">
+                    <Link to='/analytics'>
+                        <img src={calendar} />
+                    </Link>
+                </a>
 
-            <div>
-                <Link to='/hashtag'><img className="" src={hashtag} alt="" /></Link>
-            </div>
+
+                <a class="mr-5 text-white text-3xl font-bold">
+                    <Link to='/media'>
+                        <img src={graph} />
+                    </Link>
+                </a>
+
+                <a class="mr-5 text-white text-3xl font-bold">
+                    <Link to='/hashtag'>
+                        <img src={hashtag} />
+                    </Link>
+                </a>
+
+            </nav>
         </div>
-
-        <div class="flex flex-row items-center justify-center mt-[30px]">
-            <Link to='/createPost' class="mx-[500px] bg-[#A57CE6] w-[200px] hover:bg-blue-700 text-white  py-2 px-4 btn rounded-[30px] focus:outline-none focus:shadow-outline" type="button">
-                <img className="" src={editting} alt="" /> Add Post
-            </Link>
+        <div class="flex flex-row items-center justify-center">
+            <Link to='/createPost' class="flex mx-auto mt-16 text-white bg-[#A57CE6] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded rounded-full text-lg">
+                <img src={editting} />Add post</Link>
         </div>
 
         {/**boxess */}
-        <div className="justify-center gap-[30px] mt-[30px] grid grid-cols-3 gap-[10px] ml-[100px]">
-            {/** first box */}
-            <div className="bg-[#EFEFEF] w-[270px] h-[220px] text-center rounded-[30px]">
-                <div className=" flex bg-[#5273DB] text-white text-sm h-[30px] text-center rounded-tl-[40px] rounded-tr-[40px] "><p className="mt-[4px] ml-[20px]">Facebook</p><p className="text-[11px] mt-[4px] ml-[60px]">@ibake2.0 Business</p></div>
-                <div className="text-[20px] font-bold mt-[5px]">Active
-                </div>
-                <div className="grid grid-cols-1 divide-y mt-[4px] mr-[130px] ml-[15px]">
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Schedule Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[130px] text-#000000" aria-hidden="true" />
+        <section class="text-gray-600 body-font">
+            <div class="container py-24 mx-auto">
+                <div class="flex flex-wrap -m-4">
+                    {/** first box */}
+                    <div class="p-4 lg:w-1/3">
+                        <div class="h-full bg-[#EFEFEF] pt-16 pb-24 rounded rounded-tl-3xl  rounded-tr-3xl  rounded-bl-3xl  rounded-br-3xl overflow-hidden text-center relative">
+                            <div className="bg-[#5273DB] w-full -mt-16 h-10 ">
+                            <h2 class=" text-lg text-left ml-3 title-font font-medium text-white mb-1">Facebook</h2>
+                            <p className=" text-sm text-right -mt-7 title-font font-medium mr-2 text-white mb-1">@ibake2.0 (Business)</p>
+                            </div>
+                            <h2 class=" text-lg title-font font-bold text-black mt-4 mb-1">Active</h2>
+                            <div className="grid grid-cols-1 divide-y gap-2">
+                                <p className="text-sm text-left ml-3 mt-2">Schedule Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    Next Post 
+                                <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" />
+                                    </p>
+                                <p className="text-sm text-left ml-3">
+                                    Notifications
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">Posting Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    More Setings
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Next Post
-                        <p className="text-[8px] ml-[135px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
+                     {/** second box */}
+                    <div class="p-4 lg:w-1/3">
+                        <div class="h-full bg-[#EFEFEF] pt-16 pb-24 rounded rounded-tl-3xl  rounded-tr-3xl  rounded-bl-3xl  rounded-br-3xl overflow-hidden text-center relative">
+                            <div className="bg-[#6AA6D7] w-full -mt-16 h-10 ">
+                            <h2 class=" text-lg text-left ml-3 title-font font-medium text-white mb-1">Twitter</h2>
+                            <p className=" text-sm text-right -mt-7 title-font font-medium mr-2 text-white mb-1">@ibake2.0 (Business)</p>
+                            </div>
+                            <h2 class=" text-lg title-font font-bold text-black mt-4 mb-1">Active</h2>
+                            <div className="grid grid-cols-1 divide-y gap-2">
+                                <p className="text-sm text-left ml-3 mt-2">Schedule Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    Next Post 
+                                <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" />
+                                    </p>
+                                <p className="text-sm text-left ml-3">
+                                    Notifications
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">Posting Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    More Setings
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Notifications
-                        <p className="text-[8px] ml-[117px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Posting Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[138px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        More Settings
-                        <p className="text-[8px] ml-[110px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-
-                </div>
-            </div>
-
-            {/** second box */}
-            <div className="bg-[#EFEFEF] w-[270px] h-[220px] text-center rounded-[30px]">
-                <div className=" flex bg-[#6AA6D7] text-white text-sm h-[30px] text-center rounded-tl-[40px] rounded-tr-[40px] "><p className="mt-[4px] ml-[20px]">Twitter</p><p className="text-[11px] mt-[4px] ml-[60px]">@ibake2.0 Business</p></div>
-                <div className="text-[20px] font-bold mt-[5px]">Active
-                </div>
-                <div className="grid grid-cols-1 divide-y mt-[4px] mr-[130px] ml-[15px]">
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Schedule Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[130px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Next Post
-                        <p className="text-[8px] ml-[135px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Notifications
-                        <p className="text-[8px] ml-[117px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Posting Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[138px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        More Settings
-                        <p className="text-[8px] ml-[110px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-
-                </div>
-            </div>
-
-            {/** third box */}
-            <div className="bg-[#EFEFEF] w-[270px] h-[220px] text-center rounded-[30px]">
-                <div className=" flex bg-[#D74532] text-white text-sm h-[30px] text-center rounded-tl-[40px] rounded-tr-[40px] "><p className="mt-[4px] ml-[20px]">Youtube</p><p className="text-[11px] mt-[4px] ml-[60px]">@ibake2.0 Business</p></div>
-                <div className="text-[20px] font-bold mt-[5px]">Active
-                </div>
-                <div className="grid grid-cols-1 divide-y mt-[4px] mr-[130px] ml-[15px]">
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Schedule Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[130px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Next Post
-                        <p className="text-[8px] ml-[135px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Notifications
-                        <p className="text-[8px] ml-[117px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Posting Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[138px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        More Settings
-                        <p className="text-[8px] ml-[110px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
+                    {/**third box */}
+                    <div class="p-4 lg:w-1/3">
+                        <div class="h-full bg-[#EFEFEF] pt-16 pb-24 rounded rounded-tl-3xl  rounded-tr-3xl  rounded-bl-3xl  rounded-br-3xl overflow-hidden text-center relative">
+                            <div className="bg-[#D74532] w-full -mt-16 h-10 ">
+                            <h2 class=" text-lg text-left ml-3 title-font font-medium text-white mb-1">Youtube</h2>
+                            <p className=" text-sm text-right -mt-7 title-font font-medium mr-2 text-white mb-1">@ibake2.0 (Channel)</p>
+                            </div>
+                            <h2 class=" text-lg title-font font-bold text-black mt-4 mb-1">Active</h2>
+                            <div className="grid grid-cols-1 divide-y gap-2">
+                                <p className="text-sm text-left ml-3 mt-2">Schedule Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    Next Post 
+                                <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" />
+                                    </p>
+                                <p className="text-sm text-left ml-3">
+                                    Notifications
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">Posting Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    More Setings
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                            </div>
+                        </div>
                     </div>
 
 
-                </div>
-            </div>
-
-            {/** fourth box */}
-            <div className="bg-[#EFEFEF] w-[270px] h-[220px] text-center rounded-[30px]">
-                <div className=" flex bg-[#010101] text-white text-sm h-[30px] text-center rounded-tl-[40px] rounded-tr-[40px] "><p className="mt-[4px] ml-[20px]">Tiktok</p><p className="text-[11px] mt-[4px] ml-[60px]">@ibake2.0 Business</p></div>
-                <div className="text-[20px] font-bold mt-[5px]">Active
-                </div>
-                <div className="grid grid-cols-1 divide-y mt-[4px] mr-[130px] ml-[15px]">
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Schedule Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[130px] text-#000000" aria-hidden="true" />
+                    {/**fourth box */}
+                    <div class="p-4 lg:w-1/3">
+                        <div class="h-full bg-[#EFEFEF] pt-16 pb-24 rounded rounded-tl-3xl  rounded-tr-3xl  rounded-bl-3xl  rounded-br-3xl overflow-hidden text-center relative">
+                            <div className="bg-[#010101] w-full -mt-16 h-10 ">
+                            <h2 class=" text-lg text-left ml-3 title-font font-medium text-white mb-1">Tiktok</h2>
+                            <p className=" text-sm text-right -mt-7 title-font font-medium mr-2 text-white mb-1">@ibake2.0 (Profile)</p>
+                            </div>
+                            <h2 class=" text-lg title-font font-bold text-black mt-4 mb-1">Active</h2>
+                            <div className="grid grid-cols-1 divide-y gap-2">
+                                <p className="text-sm text-left ml-3 mt-2">Schedule Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    Next Post 
+                                <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" />
+                                    </p>
+                                <p className="text-sm text-left ml-3">
+                                    Notifications
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">Posting Setup <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                                <p className="text-sm text-left ml-3">
+                                    More Setings
+                                    <p className=" flex flex-col mr-20 -mt-4 text-xs text-right">
+                                    View all</p>
+                                    <ChevronRightIcon className=" flex flex-col h-5 w-5 -mt-4 ml-72 text-#000000" aria-hidden="true" /></p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }} >
-                        Next Post
-                        <p className="text-[8px] ml-[135px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Notifications
-                        <p className="text-[8px] ml-[117px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        Posting Setup
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] ml-[138px] text-#000000" aria-hidden="true" />
-                    </div>
-
-                    <div className="flex text-[12px] font-bold w-[254px]" style={{ borderTop: '1px solid #B7B7B7' }}>
-                        More Settings
-                        <p className="text-[8px] ml-[110px]">view all</p>
-                        <ChevronRightIcon className="mr-1 h-5 w-5 mt-[5px] text-#000000" aria-hidden="true" />
-                    </div>
-
-
+                    
                 </div>
             </div>
-        </div>
+        </section>
     </section>
 
 };

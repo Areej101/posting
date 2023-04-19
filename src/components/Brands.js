@@ -6,7 +6,7 @@ const Brands = () => {
   //destructure overview
   const {brands, textSocial} =overview;
   return <section className='py-9 my-20' data-aos='fade-up' data-aos-delay='400'>
-    <span className='mx-auto flex flex-col lg:flex-row items-center justify-center mb-4 font-bold'>{textSocial}</span>
+        <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-center font-bold text-gray-500">{textSocial}</p>
     <div className='container mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 space-y-1'>
       {/**brands */}
       {brands.map((item, index) => {

@@ -60,6 +60,6 @@
     "postcss": "^8.4.16",
     "react-icons": "^4.4.0",
     "swiper": "^8.4.7",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.3.1"
   }
 }

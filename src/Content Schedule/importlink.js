@@ -17,23 +17,22 @@ const Importlink = () => {
     const Menus = ["User Management"];
     const Menus2 = ["Profile Settings"];
     return <section>
-    <header className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#A57CE6]'>
-        {/* logo */}
-        <a href="# " className='flex sm:mb-3'>
-            <img src={logo} className='mx-[70px] h-[25px] mt-[-5px]' alt="" />
-            <span className='font-bold text-white mt-[-5px] mx-[-60px]'>{text}</span>
+    <header class="text-gray-600 body-font bg-[#A57CE6]">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img src={logo} className=" h-9" alt="" />
+          <span class="ml-1 text-white text-xl">Automation Post</span>
         </a>
-        <div className='flex justify-center mt-[-40px] text-white w-full'>
-            <span className='font-bold text-[30px] mx-[400px]'>Import Links</span>
-            {/* <button className="mx-[-420px] btn btn-md md:btn-md btn-[#A57CE6] bg-[#A57CE6]"><span className=''></span></button> */}
-            <div className="flex gap-[10px] mx-[20px]">
-                <img className="h-[30px]" src={bell} alt="" />
-                <div className="relaive">
-                        <img onClick={()=> setOpen(!open)} className="h-[30px]" src={user} alt="" />
-                    </div>
-                    {
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 text-white text-3xl font-bold">Import Links</a>
+          
+        </nav>
+        <button class="inline-flex items-center gap-1 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
+          <img src={bell} alt="" />
+          <img onClick={()=> setOpen(!open)} src={user} alt="" />
+          {
                         open &&
-                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5">
+                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5 md:mt-0">
                             <ul className="text-black">
                                 {Menus.map((menu) => (
                                     <Link to='/userManagement'>
@@ -50,36 +49,53 @@ const Importlink = () => {
                             </ul>
                         </div>
                     }
-            </div>
-        </div>
+        </button>
+      </div>
     </header>
-    <div className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#EFEFEF] flex justify-center gap-[60px]'>
-    <div>
-            <Link to='/importlink'><img className="" src={link} alt="" /></Link>
-            </div>
 
-            <div>
-           <Link to='/importcsv'><img className="" src={file} alt="" /></Link>
-            </div>
+    <div class="container  px-0 min-w-full flex flex-wrap p-5 flex-col md:flex-row items-center justify-normal bg-[#EFEFEF]">
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center bg-[#EFEFEF]">
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/importlink'>
+            <img src={link} />
+            </Link>
+          </a>
 
-            <div>
-            <Link to='/overview'><img className="" src={edit} alt="" /></Link>
-            </div>
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/importcsv'>
+            <img src={file} />
+            </Link>
+          </a>
 
-            <div>
-            <Link to='/analytics'><img className="" src={calendar} alt="" /></Link>
-            </div>
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/overview'>
+            <img src={edit} />
+            </Link>
+          </a>
 
-            <div>
-            <Link to='/media'><img className="" src={graph} alt="" /></Link>
-            </div>
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/analytics'>
+            <img src={calendar} />
+            </Link>
+          </a>
 
-            <div>
-            <Link to='/hashtag'><img className="" src={hashtag} alt="" /></Link>
-            </div>
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/media'>
+            <img src={graph} />
+            </Link>
+          </a>
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/hashtag'>
+            <img src={hashtag} />
+            </Link>
+          </a>
+          
+        </nav>
     </div>
     <div>
-        <p className="text-sm font-bold mt-[10px] mx-[450px]">Select Your Social Media Profiles you want to share on.</p>
+    <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-center font-bold text-gray-500s">Select Your Social Media Profiles you want to share on.</p>
     </div>
 
     <div>
@@ -201,12 +217,14 @@ const Importlink = () => {
 </Menu>
         
     </div>
-    <div class="flex flex-row items-center justify-center mt-[80px]">
-      <button class="mx-[530px] bg-[#A57CE6] w-[220px] hover:bg-blue-700 text-white font-bold py-2 px-4 btn btn-md md:btn-md rounded-[30px] focus:outline-none focus:shadow-outline" type="button">
-      <img src={document} alt="" />Import Links
-      </button>
+    <div class="flex flex-row items-center justify-center">
+    <button class="flex mx-auto mt-16 text-white bg-[#A57CE6] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded rounded-full text-lg">
+    <img src={document} alt="" />Import Links</button>
+      
     </div>
-    <p className='mt-[5px] underline underline-offset-1 flex justify-center'>Advanced</p>
+    <div className="flex-grow">
+    <h2 class="text-gray-900 text-lg text-center title-font font-medium mb-3 underline underline-offset-1">Advanced</h2>
+    </div>
     <div className='flex justify-center gap-[40px]'>
     <Menu>
     <Menu.Button className=" mt-[20px] font-bold inline-flex w-[150px] justify-center gap-x-1.5 rounded-full bg-[#EFEFEF] px-3 py-2 text-sm font-bold text-gray-900 shadow-sm hover:bg-gray-50">
@@ -214,12 +232,12 @@ const Importlink = () => {
       <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
     </Menu.Button>
     </Menu>
-    <p className="mt-[25px] underline underline-offset-1">or continue without Category</p>
+    
+     <h2 class="text-gray-900 text-lg text-left title-font font-medium mb-10 underline underline-offset-1">or continue without Category</h2>
+
     </div>
-    <div class="flex flex-row items-center justify-center mt-[30px]">
-      <button class="mx-[530px] bg-[#A57CE6] w-[300px]  hover:bg-blue-700 text-white font-bold py-2 px-4 btn rounded-[30px] focus:outline-none focus:shadow-outline" type="button">
-        Import
-      </button>
+    <div class="flex flex-row items-center justify-center">
+    <button class="flex mx-auto mt-16 text-white bg-[#A57CE6] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded rounded-full text-lg">Import</button>
     </div>
 
 

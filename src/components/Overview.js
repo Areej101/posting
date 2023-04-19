@@ -6,32 +6,53 @@ import { overview } from '../data'
 const Overview = () => {
     //destructure overview data
     const { productImg, logo1,logo2,logo3,logo4 } = overview;
-    return <section className='-my-20 mt-[-130px] min-h-[200px] lg:min-h-[300px] bg-overview bg-cover bg-left-top pt-[30px] lg:pt-[87px]' data-aos='fade-up' data-aos-offset='200'>
-        <div className='container mx-auto'>
-            <div className='flex flex-row jusify-center items-center gap-6 h-[140px]'>
-                <a href="#" className='h-[250px] w-[300px] block max-w-sm p-6 bg-[#A57CE6] border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-white justify-center items-center' data-aos='fade-up' data-aos-offset='300'>
-                <img src={logo1} className='mx-auto h-[70px] w-[50px]' alt="" />
-                    <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white text-[30px] mx-auto text-center'>Manage</h5>
-                    <p className='font-normal text-[17px] mx-[30px] text-center'>Manage your social media profiles from Automatic Post.</p>
-                </a>
-                <a href="#" className='h-[250px] w-[300px] block max-w-sm p-6 bg-[#A57CE6] border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-white'  data-aos='fade-up' data-aos-offset='300'>
-                <img src={logo2} className='mx-auto h-[70px] w-[50px]' alt="" />
-                    <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white text-[30px] mx-auto text-center'>Schedule</h5>
-                    <p className='font-normal text-[17px] mx-[30px] text-center'>Schedule posts ahead of time in a calendar.</p>
-                </a>
-                <a href="#" className=' h-[250px] w-[300px] block max-w-sm p-6 bg-[#A57CE6] border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-white'  data-aos='fade-up' data-aos-offset='300'>
-                <img src={logo3} className='mx-auto h-[70px] w-[50px]' alt="" />
-                    <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white text-[30px] mx-auto text-center'>Publish</h5>
-                    <p className='font-normal text-[17px] mx-[30px] text-center'>Share content across all your social media profiles.</p>
-                </a>
-                <a href="#" className=' h-[250px] w-[300px] block max-w-sm p-6 bg-[#A57CE6] border border-gray-200 rounded-lg shadow  dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 text-white'  data-aos='fade-up' data-aos-offset='300'>
-                <img src={logo4}className='mx-auto h-[70px] w-[50px]'  alt="" />
-                    <h5 className='mb-2 text-2xl font-bold tracking-tight text-gray-900 text-white text-[30px] mx-auto text-center'>Analyze</h5>
-                    <p className='font-normal text-[17px] mx-[30px] text-center'>Get insightful data about your social media growth.</p>
-                </a>
-            </div>
+    return <section class="text-white body-font bg-overview">
+    <div class="container px-5 py-20 mx-auto">
+      <div class="flex flex-wrap -m-4 gap-8">
+
+        <div class="lg:w-1/4 md:w-1/2 p-4  lg:w-64 bg-[#A57CE6] rounded-3xl">
+          <img  src={logo1} class="mx-auto block relative h-28 rounded overflow-hidden">
+            
+          </img>
+          <div class="mt-4">
+            <h3 class="text-white text-center font-bold tracking-tight text-3xl mb-1">Manage</h3>
+            <h2 class="text-white mx-7 text-center font-medium">Managne your social media profiles from Automatic Post.</h2>
+          </div>
         </div>
-    </section>
+
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl">
+          <img  src={logo2} class="mx-auto block relative h-28 rounded overflow-hidden">
+            
+          </img>
+          <div class="mt-4">
+            <h3 class="text-white text-center font-bold tracking-tight text-3xl mb-1">Schedule</h3>
+            <h2 class="text-white mx-7 text-center font-medium">Schedule posts ahead of time in a calendar.</h2>
+          </div>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl">
+          <img  src={logo3} class="mx-auto block relative h-28 rounded overflow-hidden">
+            
+          </img>
+          <div class="mt-4">
+            <h3 class="text-white text-center font-bold tracking-tight text-3xl mb-1">Publish</h3>
+            <h2 class="text-white mx-7 text-center font-medium">Share content across all your social media profiles.</h2>
+          </div>
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl">
+          <img  src={logo4} class="mx-auto block relative h-28 rounded overflow-hidden">
+            
+          </img>
+          <div class="mt-4">
+            <h3 class="text-white text-center font-bold tracking-tight text-3xl mb-1">Analyze</h3>
+            <h2 class="text-white mx-7 text-center font-medium">Get insightful data about your social media growth.</h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
     ;
 };
 

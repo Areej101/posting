@@ -2,18 +2,19 @@ import React from 'react';
 //import data
 import {nav} from '../data'
 //import icons
+import {Link } from "react-router-dom";
 
 const Nav = () => {
   return <nav>
     <ul className='flex  gap-x-6'>
         {nav.map((item, index) => {
             //destructure item 
-            const {href, name} = item;
+            const {to, name} = item;
             return (
                 <li key={index}>
-                    <a className='hover:text transition text-white' href={href}>
+                    <Link className='hover:text transition text-white' to={to}>
                         {name}
-                    </a>
+                    </Link>
                 </li>
             );
         })}

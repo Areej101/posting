@@ -10,32 +10,31 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 
 const Schedule = () => {
-    function classNames(...classes) {
-        return classes.filter(Boolean).join(' ')
-      }
-    const { logo, text } = onboarding;
-    const { bell, user, link, file, edit, calendar, graph, hashtag } = schedule;
-    const [open, setOpen] = useState(false);
-    const Menus = ["User Management"];
-    const Menus2 = ["Profile Settings"];
-    return <section className="">
-        <header className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#A57CE6]'>
-            {/* logo */}
-            <a href="# " className='flex sm:mb-3'>
-                <img src={logo} className='mx-[70px] h-[25px] mt-[-5px]' alt="" />
-                <span className='font-bold text-white mt-[-5px] mx-[-60px]'>{text}</span>
-            </a>
-            <div className='flex justify-center mt-[-40px] text-white w-full'>
-                <span className='font-bold text-[30px] mx-[400px]'>Content Schedule</span>
-                {/* <button className="mx-[-420px] btn btn-md md:btn-md btn-[#A57CE6] bg-[#A57CE6]"><span className=''></span></button> */}
-                <div className="flex gap-[10px] mx-[20px]">
-                    <img className="h-[30px]" src={bell} alt="" />
-                    <div className="relaive">
-                        <img onClick={()=> setOpen(!open)} className="h-[30px]" src={user} alt="" />
-                    </div>
-                    {
+  function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+  }
+  const { logo, text } = onboarding;
+  const { bell, user, link, file, edit, calendar, graph, hashtag } = schedule;
+  const [open, setOpen] = useState(false);
+  const Menus = ["User Management"];
+  const Menus2 = ["Profile Settings"];
+  return <section className="">
+    <header class="text-gray-600 body-font bg-[#A57CE6]">
+      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a href="#" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img src={logo} className=" h-9" alt="" />
+          <span class="ml-1 text-white text-xl">Automation Post</span>
+        </a>
+        <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+          <a class="mr-5 text-white text-3xl font-bold">Content Schedule</a>
+          
+        </nav>
+        <button class="inline-flex items-center gap-1 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
+          <img src={bell} alt="" />
+          <img onClick={()=> setOpen(!open)} src={user} alt="" />
+          {
                         open &&
-                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5">
+                        <div className="bg-white p-[1] w-45 shadow-lg absolute top-12 right-5 md:mt-0">
                             <ul className="text-black">
                                 {Menus.map((menu) => (
                                     <Link to='/userManagement'>
@@ -52,167 +51,61 @@ const Schedule = () => {
                             </ul>
                         </div>
                     }
-                </div>
-            </div>
-        </header>
-
-
-        <div className='py-6 lg:py-4 w-full h-[60px] transition-all z-10 bg-[#EFEFEF] flex justify-center  gap-[60px]'>
-            <div>
-                <Link to='/importlink'><img className="" src={link} alt="" /></Link>
-            </div>
-
-            <div>
-                <Link to='/importcsv'><img className="" src={file} alt="" /></Link>
-            </div>
-
-            <div>
-                <Link to='/overview'><img className="" src={edit} alt="" /></Link>
-            </div>
-
-            <div>
-                <Link to='/analytics'><img className="" src={calendar} alt="" /></Link>
-            </div>
-
-            <div>
-                <Link to='/media'><img className="" src={graph} alt="" /></Link>
-            </div>
-
-            <div>
-                <Link to='/hashtag'><img className="" src={hashtag} alt="" /></Link>
-            </div>
-        </div>
-
-        <div className="flex justify-center">
-            <p className="text-center mt-[40px] text-sm ml-[230px]">This is how your categories are scheduled. Doesn’t Looks Good? Change it!</p>
-            <div>
-    <Menu as="div" className="relative inline-block text-left">
-  <div>
-    <Menu.Button className=" mt-[30px] ml-[100px] inline-flex w-[140px] justify-center  rounded-full bg-[#EFEFEF] px-3 py-2 text-sm font-bold text-gray-900 shadow-sm hover:bg-gray-50">
-      Weekly
-      <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
-    </Menu.Button>
-  </div>
-
-  <Transition
-    as={Fragment}
-    enter="transition ease-out duration-100"
-    enterFrom="transform opacity-0 scale-95"
-    enterTo="transform opacity-100 scale-100"
-    leave="transition ease-in duration-75"
-    leaveFrom="transform opacity-100 scale-100"
-    leaveTo="transform opacity-0 scale-95"
-  >
-    <Menu.Items className="absolute  right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-      <div className="py-1">
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              href="#"
-              className={classNames(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm'
-              )}
-            >
-              {/**put options here */}
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              href="#"
-              className={classNames(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm'
-              )}
-            >
-                            {/**put options here */}
-
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              href="#"
-              className={classNames(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm'
-              )}
-            >
-                            {/**put options here */}
-
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              href="#"
-              className={classNames(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm'
-              )}
-            >
-                            {/**put options here */}
-
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              href="#"
-              className={classNames(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm'
-              )}
-            >
-                            {/**put options here */}
-
-            </a>
-          )}
-        </Menu.Item>
-        <Menu.Item>
-          {({ active }) => (
-            <a
-              href="#"
-              className={classNames(
-                active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                'block px-4 py-2 text-sm'
-              )}
-            >
-                            {/**put options here */}
-
-            </a>
-          )}
-        </Menu.Item>
-        <form method="POST" action="#">
-          <Menu.Item>
-            {({ active }) => (
-              <button
-                type="submit"
-                className={classNames(
-                  active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
-                  'block w-full px-4 py-2 text-left text-sm'
-                )}
-              >
-                              {/**put options here */}
-
-              </button>
-            )}
-          </Menu.Item>
-        </form>
+        </button>
       </div>
-    </Menu.Items>
-  </Transition>
-</Menu>
-        
+    </header>
+
+    <div class="container  px-0 min-w-full flex flex-wrap p-5 flex-col md:flex-row items-center justify-normal bg-[#EFEFEF]">
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center bg-[#EFEFEF]">
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/importlink'>
+            <img src={link} />
+            </Link>
+          </a>
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/importcsv'>
+            <img src={file} />
+            </Link>
+          </a>
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/overview'>
+            <img src={edit} />
+            </Link>
+          </a>
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/analytics'>
+            <img src={calendar} />
+            </Link>
+          </a>
+
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/media'>
+            <img src={graph} />
+            </Link>
+          </a>
+
+          <a class="mr-5 text-white text-3xl font-bold">
+            <Link to='/hashtag'>
+            <img src={hashtag} />
+            </Link>
+          </a>
+          
+        </nav>
     </div>
-        </div>
-        <div className="mt-[50px]">
-        <table className="a">
+
+    
+
+    <div className="flex justify-center">
+      <p className="text-center mt-[40px] text-sm">This is how your categories are scheduled. Doesn’t Looks Good? Change it!</p>
+     
+    </div>
+    
+    <div className="lg:w-full w-full mx-auto overflow-auto mt-11">
+      <table className="a table-auto w-full">
         <thead>
           <tr className="bg-[#EFEFEF]">
             <th>Monday</th>
@@ -253,16 +146,7 @@ const Schedule = () => {
             <td></td>
           </tr>
           <tr>
-          <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-          <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -271,7 +155,7 @@ const Schedule = () => {
             <td></td>
           </tr>
           <tr>
-          <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -280,7 +164,7 @@ const Schedule = () => {
             <td></td>
           </tr>
           <tr>
-          <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -288,14 +172,23 @@ const Schedule = () => {
             <td></td>
             <td></td>
           </tr>
-          
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+
         </tbody>
       </table>
-        </div>
+    </div>
 
 
 
-    </section>
+  </section>
 
 }
 
