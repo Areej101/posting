@@ -7,7 +7,7 @@ import Copyright from '../components/Copyright';
 const Footer = () => {
   //destructure footer data
   const { logo, links, legal, newsletter, form, Vision, terms, btnext7, title8,title7, icon1,icon2,icon3} = footer;
-  return <footer class="text-white body-font bg-[#AD7AED] mt-8">
+  return <footer class="text-white body-font bg-[#AD7AED] mt-8" data-aos='fade-up' data-aos-delay='700'>
   <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
     <span class="inline-block py-1 px-2 rounded bg-[#542E90] text-white text-xs font-medium tracking-widest ml-3 rounded-full">CONTACT US</span>

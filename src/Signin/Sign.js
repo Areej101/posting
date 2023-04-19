@@ -23,7 +23,7 @@ const Sign = () => {
     </header>
     <div className='lg:w-1/2 md:w-full'>
     <div className='flex sm:flex-col md:flex-col flex-col'>
-    <div className=' curved bg-[#A57CE6] w-[500px] ml-[428px] h-[600px] mt-[1px] xl:w-1/4 lg:w-1/2 md:w-full'>
+    <div className='curved bg-[#A57CE6] ml-[428px] mt-[1px] xl:w-1/4 lg:w-1/2 md:w-full'>
       {/**slider */}
       <Swiper
         modules={[Navigation, Pagination, A11y]}
@@ -48,7 +48,7 @@ const Sign = () => {
 
 
     <div class="p-4 lg:w-1/2 md:w-full -mt-[500px]">
-      <div class="flex  p-8 sm:flex-row flex-col">
+      <div class="flex  p-8 sm:flex-col flex-col">
         <div class="flex-grow">
           <h2 class="text-gray-900 text-4xl title-font text-center font-medium mb-3">Sign in Continue</h2>
           <div class="relative flex-grow w-full flex justify-center">

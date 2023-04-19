@@ -5,9 +5,9 @@ import { cta } from '../data';
 const Cta = () => {
   //destructure cta data
   const { title, subtitle, subtitle2, btnText, bntext4, comp2Text, free, img1} = cta;
-  return <section class="text-gray-600 body-font mx-auto mt-24 bg-[#FAFAFA]">
+  return <section class="text-gray-600 body-font mx-auto mt-24 bg-[#FAFAFA]" data-aos='fade-up' data-aos-delay='600'>
   <div class="container min-w-full px-0 flex px-5 py-24 md:flex-row flex-col items-center">
-    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center lg:ml-32">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center lg:ml-32" data-aos='fade-up' data-aos-delay='700'>
       <h1 class="title-font sm:text-4xl text-4xl mb-4 font-bold text-gray-900">Plan Your Social Media Content
         <br class="hidden lg:inline-block" />
       </h1>
@@ -19,7 +19,7 @@ const Cta = () => {
       <p class="text-sm mt-2 text-black mb-8 w-full font-bold">14-Day Free Trial, No Credit Card Required</p>
 
     </div>
-    <div class="lg:max-w-sm lg:w-full md:w-1/2 w-5/6">
+    <div class="lg:max-w-sm lg:w-full md:w-1/2 w-5/6" data-aos='fade-up' data-aos-delay='700'>
       <img class="object-cover object-center rounded" alt="hero" src={img1} />
     </div>
   </div>

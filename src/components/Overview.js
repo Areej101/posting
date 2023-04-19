@@ -6,11 +6,11 @@ import { overview } from '../data'
 const Overview = () => {
     //destructure overview data
     const { productImg, logo1,logo2,logo3,logo4 } = overview;
-    return <section class="text-white body-font bg-overview">
+    return <section class="text-white body-font bg-overview" data-aos='fade-up' data-aos-offset='200'>
     <div class="container px-5 py-20 mx-auto">
       <div class="flex flex-wrap -m-4 gap-8">
 
-        <div class="lg:w-1/4 md:w-1/2 p-4  lg:w-64 bg-[#A57CE6] rounded-3xl">
+        <div class="lg:w-1/4 md:w-1/2 p-4  lg:w-64 bg-[#A57CE6] rounded-3xl" data-aos='fade-up' data-aos-offset='300'>
           <img  src={logo1} class="mx-auto block relative h-28 rounded overflow-hidden">
             
           </img>
@@ -20,7 +20,7 @@ const Overview = () => {
           </div>
         </div>
 
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl" data-aos='fade-up' data-aos-offset='300'>
           <img  src={logo2} class="mx-auto block relative h-28 rounded overflow-hidden">
             
           </img>
@@ -30,7 +30,7 @@ const Overview = () => {
           </div>
         </div>
 
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl" data-aos='fade-up' data-aos-offset='300'>
           <img  src={logo3} class="mx-auto block relative h-28 rounded overflow-hidden">
             
           </img>
@@ -40,7 +40,7 @@ const Overview = () => {
           </div>
         </div>
 
-        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl">
+        <div class="lg:w-1/4 md:w-1/2 p-4 w-full lg:w-64 bg-[#A57CE6] rounded-3xl" data-aos='fade-up' data-aos-offset='300'>
           <img  src={logo4} class="mx-auto block relative h-28 rounded overflow-hidden">
             
           </img>

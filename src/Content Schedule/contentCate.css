@@ -4,6 +4,20 @@
     border-collapse: collapse;
     margin-left: -20px;
   }
+  .aa {
+    width: 1300px;
+    height: 400px;
+    border-collapse: collapse;
+    margin-left: -20px;
+  }
+  .aa th {
+    border-bottom: 1px solid black;
+    border: 2px solid #EFEFEF;
+  }
+  .aa td {
+    text-align: center;
+    border: 1px solid #EFEFEF;
+  }
   .b {
     width: 1300px;
     height: 50px;

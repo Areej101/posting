@@ -105,7 +105,7 @@ const Schedule = () => {
     </div>
     
     <div className="lg:w-full w-full mx-auto overflow-auto mt-11">
-      <table className="a table-auto w-full">
+      <table className="aa table-auto w-full">
         <thead>
           <tr className="bg-[#EFEFEF]">
             <th>Monday</th>
