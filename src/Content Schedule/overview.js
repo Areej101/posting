@@ -19,7 +19,7 @@ const Overview = () => {
                     <span class="ml-1 text-white text-xl">Automation Post</span>
                 </a>
                 <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-                    <a class="mr-5 text-white text-3xl font-bold">Overview</a>
+                    <a class="lg:mr-20 mr-5 text-white text-3xl font-bold">Overview</a>
 
                 </nav>
                 <button class="inline-flex items-center gap-1 py-1 px-3 focus:outline-none rounded text-base mt-4 md:mt-0">
@@ -90,14 +90,14 @@ const Overview = () => {
             </nav>
         </div>
         <div class="flex flex-row items-center justify-center">
-            <Link to='/createPost' class="flex mx-auto mt-16 text-white bg-[#A57CE6] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded rounded-full text-lg">
+            <Link to='/createPost' class="flex mx-auto mt-12 text-white bg-[#A57CE6] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded rounded-full text-lg">
                 <img src={editting} />Add post</Link>
         </div>
 
         {/**boxess */}
         <section class="text-gray-600 body-font">
             <div class="container py-24 mx-auto">
-                <div class="flex flex-wrap -m-4">
+                <div class="flex flex-wrap -m-10">
                     {/** first box */}
                     <div class="p-4 lg:w-1/3">
                         <div class="h-full bg-[#EFEFEF] pt-16 pb-24 rounded rounded-tl-3xl  rounded-tr-3xl  rounded-bl-3xl  rounded-br-3xl overflow-hidden text-center relative">

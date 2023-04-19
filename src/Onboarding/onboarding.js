@@ -24,7 +24,7 @@ const Onboarding = () => {
         </header>
 
 
-        <div className='flex mt-6 gap-24 justify-center'>
+        <div className='flex mt-6 lg:gap-24 gap-8 md:gap-16 justify-center'>
             <h2 class="text-gray-900 font-bold title-font tracking-wider text-sm">Social Profiles</h2>
             <h2 class="text-gray-900 font-bold title-font tracking-wider text-sm">Content</h2>
             <h2 class="text-gray-900 font-bold title-font tracking-wider text-sm">Create Schedule</h2>
@@ -32,27 +32,29 @@ const Onboarding = () => {
 
         {/** next part */}
         <section className="bg-[#EFEFEF] mt-9 rounded rounded-tl-[100px] rounded-tr-[100px]">
-            <div class= " md:w-1/3 flex flex-row justify-items-center gap-24">
-                <div class="w-20 h-20 -mt-9 inline-flex items-center justify-center rounded-full bg-[#FFFFFF] text-purple-500 flex-shrink-0">
-                    <a className="w-10 h-10">
-                        <img src={image11} alt="" />
+            <div class= " md:w-1/3 flex flex-row justify-around" >
+                <div className=" -mt-9 flex justify-around lg:gap-28 md:gap-20 md:ml-[500px] sm:gap-24 gap-10 lg:ml-[830px]">
+                <div class="w-20 h-20 inline-flex items-center justify-center rounded-full bg-[#FFFFFF] text-purple-500 flex-shrink-0 hover:bg-[#A57CE6]" style={{boxShadow: '0px 3px 6px #0000006E'}}>
+                    <a className="w-10 h-10 ">
+                        <img className="mx-auto" src={image11} alt="" />
                     </a>
                 </div>
 
-                <div class="w-20 h-20 -mt-9 inline-flex items-center justify-center rounded-full bg-[#FFFFFF] text-purple-500 flex-shrink-0">
+                <div class="w-20 h-20  inline-flex items-center justify-center rounded-full bg-[#FFFFFF] text-purple-500 flex-shrink-0 hover:bg-[#A57CE6]" style={{boxShadow: '0px 3px 6px #0000006E'}}>
                     <a className="w-10 h-10">
                     <Link to='/schedule'>
-                        <img src={image12} alt="" />
+                        <img className="mx-auto" src={image12} alt="" />
                     </Link>
                     </a>
                 </div>
 
-                <div class="w-20 h-20 -mt-9 inline-flex items-center justify-center rounded-full bg-[#FFFFFF] text-purple-500 flex-shrink-0">
+                <div class="w-20 h-20  inline-flex items-center justify-center rounded-full bg-[#FFFFFF] text-purple-500 flex-shrink-0 hover:bg-[#A57CE6]" style={{boxShadow: '0px 3px 6px #0000006E'}}>
                     <a className="w-10 h-10">
                     <Link to='/scheduleSetup'>
-                        <img src={image13} alt="" />
+                        <img className="mx-auto" src={image13} alt="" />
                     </Link>
                     </a>
+                </div>
                 </div>
             </div>
             <div>
@@ -60,88 +62,89 @@ const Onboarding = () => {
                 <p class="leading-relaxed text-base text-center">Connect New Social Profiles or Manage your existing profiles to this workspace.</p>
             </div>
 
-            <div className="bg-[#FFFFFF] flex flex-col mt-9 rounded rounded-tl-[100px] rounded-tr-[100px] px-32">
-            <div className="flex flex-row gap-4">
-            <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image14} />
-            <p className=" mt-14 ">Facebook</p>
-            <div className="mt-12 ml-16">
-            <button class=" text-white bg-[#5273DB] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
+            <div className="bg-[#FFFFFF] flex flex-col mt-9 rounded rounded-tl-[100px] rounded-tr-[100px] lg:px-32 w-full">
+            <div className="flex flex-row lg:gap-4 gap-2">
+            <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center" src={image14} />
+            <div className="mt-12 lg:ml-16">
+            <button class=" text-white bg-[#5273DB] border-0 py-2 px-4 md:px-6 lg:px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
              </div>
-             <div className="mt-12 ml-16">
-             <button class=" text-white bg-[#5273DB] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Page</button>
+             <div className="mt-12 lg:ml-16">
+             <button class=" text-white bg-[#5273DB] border-0 py-2 px-4 md:px-6 lg:px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Page</button>
              </div>
-             <div className="mt-12 ml-16">
-             <button class=" text-white bg-[#5273DB] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Group</button>
+             <div className="mt-12 lg:ml-16">
+             <button class=" text-white bg-[#5273DB] border-0 py-2 px-4 md:px-6 lg:px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Group</button>
              </div>
              </div>
 
 
-             <div className="flex flex-row gap-4">
+             <div className="flex flex-row lg:gap-4 gap-2 -mt-5">
             <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image15} />
-            <p className=" mt-14 ">Instagram</p>
-            <div className="mt-12 ml-16">
+            <div className="mt-12 lg:ml-16">
             <button class=" text-white bg-[#A2468D] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
              </div>
-             <div className="mt-12 ml-16">
+             <div className="mt-12 lg:ml-16">
              <button class=" text-white bg-[#A2468D] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Business</button>
              </div>
             
              </div>
 
 
-             <div className="flex flex-row gap-4">
+             <div className="flex flex-row lg:gap-4 gap-2 -mt-5">
             <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image16} />
-            <p className=" mt-14 ">Linkedin</p>
-            <div className="mt-12 ml-16">
+            <div className="mt-12 lg:ml-16">
             <button class=" text-white bg-[#5276A8] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
              </div>
-             <div className="mt-12 ml-16">
+             <div className="mt-12 lg:ml-16">
              <button class=" text-white bg-[#5276A8] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Company</button>
              </div>
              </div>
 
 
-             <div className="flex flex-row gap-4">
+             <div className="flex flex-row gap-4 -mt-5">
             <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image17} />
-            <p className=" mt-14 ">Twitter</p>
-            <div className="mt-12 ml-16">
+            <div className="mt-12 lg:ml-16">
             <button class=" text-white bg-[#78A4D3] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
              </div>
              </div>
 
 
 
-             <div className="flex flex-row gap-4">
+             <div className="flex flex-row gap-4 -mt-5">
             <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image18} />
-            <p className=" mt-14 ">Pinterest</p>
-            <div className="mt-12 ml-16">
+            <div className="mt-12 lg:ml-16">
             <button class=" text-white bg-[#9E443B] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
              </div>
              </div>
 
 
 
-             <div className="flex flex-row gap-4">
+             <div className="flex flex-row gap-4 -mt-5">
             <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image19} />
-            <p className=" mt-14 ">Tiktok</p>
-            <div className="mt-12 ml-16">
+            <div className="mt-12 lg:ml-16">
             <button class=" text-white bg-[#000000] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Profile</button>
              </div>
              </div>
 
 
 
-             <div className="flex flex-row gap-4">
+             <div className="flex flex-row gap-4 -mt-5">
             <img alt="testimonial" class=" mt-10 w-16 h-16 mb-8 object-cover object-center inline-block" src={image20} />
-            <p className=" mt-14 ">Youtube</p>
-            <div className="mt-12 ml-16">
+            <div className="mt-12 lg:ml-16">
             <button class=" text-white bg-[#D74532] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded rounded-full text-lg">Company</button>
              </div>
              </div>
-             <div className=" flex justify-end">
-            <button class="inline-flex text-white bg-purple-500 border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">Button</button>
+             <div className=" flex justify-end w-full">
+            <Link to='/contentcategory' class="btn btn-lg lg:btn-lg w-[200px] inline-flex text-white bg-[#A57CE6] border-0 py-2 px-6 focus:outline-none hover:bg-purple-600 rounded text-lg">Next</Link>
             </div>
             </div>
+
+
+
+
+
+
+
+
 
             <div className="flex flex-row gap-20 ml-5 font-bold">
             
