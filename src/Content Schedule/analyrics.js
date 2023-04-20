@@ -103,13 +103,13 @@ const Analytics = () => {
           
         </nav>
     </div>
-        <div className="flex">
+
             <div>
-                <p className="font-bold text-[30px] mt-[23px] ml-[40px]">Dashboard</p>
+                <p className="font-bold text-[30px] mt-[23px] flex justify-start">Dashboard</p>
             </div>
-            <div className="flex gap-[20px] ml-[530px]">
+            <div className="flex gap-[20px] justify-end">
                 <div className="">
-                    <Menu as="div" className="relative inline-block text-left">
+                    <Menu as="div" className="relative inline-block text-left flex justify-end">
                         <div>
                             <Menu.Button className="mt-[20px] inline-flex w-[250px] justify-center gap-x-1.5 rounded-full bg-[#EFEFEF] px-3 py-2 text-sm font-bold text-gray-900 shadow-sm hover:bg-gray-50">
                                 Show All Social Profiles
@@ -126,7 +126,7 @@ const Analytics = () => {
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                         >
-                            <Menu.Items className="absolute mx-[500px] right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                 <div className="py-1">
                                     <Menu.Item>
                                         {({ active }) => (
@@ -247,7 +247,7 @@ const Analytics = () => {
                             leaveFrom="transform opacity-100 scale-100"
                             leaveTo="transform opacity-0 scale-95"
                         >
-                            <Menu.Items className="absolute mx-[500px] right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                            <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                                 <div className="py-1">
                                     <Menu.Item>
                                         {({ active }) => (
@@ -350,8 +350,6 @@ const Analytics = () => {
                 </div>
             </div>
 
-
-        </div>
     </section>
 
 };

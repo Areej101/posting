@@ -98,9 +98,9 @@ const Media = () => {
       <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-center font-bold text-gray-500s">Select Your Social Media Profiles you want to share on.</p>        </div>
 
     <div>
-      <Menu as="div" className="relative inline-block text-left">
+      <Menu as="div" className="relative inline-block text-left flex justify-center">
         <div>
-          <Menu.Button className="mx-[500px] mt-[20px] inline-flex w-[250px] justify-center gap-x-1.5 rounded-full bg-[#EFEFEF] px-3 py-2 text-sm font-bold text-gray-900 shadow-sm hover:bg-gray-50">
+          <Menu.Button className=" mt-[20px] inline-flex w-[250px] justify-center gap-x-1.5 rounded-full bg-[#EFEFEF] px-3 py-2 text-sm font-bold text-gray-900 shadow-sm hover:bg-gray-50">
             Select Social Media Account
             <ChevronDownIcon className="-mr-1 h-5 w-5 text-gray-400" aria-hidden="true" />
           </Menu.Button>
@@ -115,8 +115,8 @@ const Media = () => {
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute mx-[500px] right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="py-1">
+          <Menu.Items className="flex justify-center absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+            <div className="py-1 justify-items-center">
               <Menu.Item>
                 {({ active }) => (
                   <a
@@ -216,13 +216,14 @@ const Media = () => {
       </Menu>
 
     </div>
-    <div className="bg-[#EFEFEF] mt-[30px] w-[600px] ml-[350px] h-[100px] rounded rounded-full">
-      <p className="ml-[50px] text-[#EFEFEF]">bdhbhbd</p>
-      <div className="ml-[150px] flex mt-[-10px] gap-[20px]">
-        <img className="h-[60px]" src={multimedia} alt="" />
-        <p className="mt-[20px]">Drag Photos or Videos</p>
+    <div class="flex lg:ml-[450px] md:ml-[240px] text-center w-full bg-[#EFEFEF] mt-5 w-96 h-24 rounded rounded-full ">
+      <div className="flex mt-5  justify-center w-full">
+        <img className="h-[60px] ml-10" src={multimedia} alt="" />
+        <p className="mt-[20px] lg:w-2/3 mx-auto leading-relaxed text-base mt-6">Drag Photos or Videos</p>
       </div>
+    
     </div>
+
     <div class="flex flex-row items-center justify-center">
       <button class="flex mx-auto mt-16 text-white bg-[#A57CE6] border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded rounded-full text-lg">
         <img src={image} />Import Media</button>
@@ -231,7 +232,7 @@ const Media = () => {
     <div className="flex-grow">
       <h2 class="text-gray-900 text-lg text-center title-font font-medium mb-3 underline underline-offset-1">Advanced</h2>
     </div>
-
+   
     <div className='flex justify-center gap-[40px]'>
       <Menu>
         <Menu.Button className=" mt-[20px] font-bold inline-flex w-[150px] justify-center gap-x-1.5 rounded-full bg-[#EFEFEF] px-3 py-2 text-sm font-bold text-gray-900 shadow-sm hover:bg-gray-50">

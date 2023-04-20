@@ -2,7 +2,7 @@
     background-color: #A57CE6;
     width: 500px;
     height: 600px;
-    float: left;
+    display: flex;
   
 }
 
@@ -13,7 +13,6 @@
 
 .form1{
     background-color: white;
-   
     width: 300px;
    
 
@@ -23,12 +22,6 @@
     text-align: center;
     font-weight: bold;
 
-}
-.insidediv{
-   
-}
-.insidediv2{
-   
 }
 .forget{
     width: 300px;
@@ -68,4 +61,13 @@
     align-items: center;
 }
 
-
+@media only screen and (max-width: 900px) {
+    .curved {
+        /* it place the items in vertical direction */
+      flex-direction: column;
+    }
+  
+    .box {
+      margin: 0 0 1rem;
+    }
+  }
