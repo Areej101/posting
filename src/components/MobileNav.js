@@ -18,11 +18,9 @@ const MobileNav = () => {
         //destructure
         const { to, name } = item;
         return <li key={index}>
-          <Link>
-            <a className='link text-white text-xl' to={to}>
+            <Link className='link text-white text-xl' to={to}>
               {name}
-            </a>
-          </Link>
+            </Link>
 
         </li>
       })}
