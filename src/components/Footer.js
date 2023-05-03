@@ -13,7 +13,7 @@ const Footer = () => {
     <span class="inline-block py-1 px-2 rounded bg-[#542E90] text-white text-xs font-medium tracking-widest ml-3 rounded-full">CONTACT US</span>
       <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
         
-        <span class="ml-3 text-xl mt-3">Contact@automaicpost.com</span>
+        <span class="ml-3 text-xl mt-3">Support@automatic.marketing</span>
       </a>
       <p class="mt-8 px-4 text-sm text-white">Social Media</p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
